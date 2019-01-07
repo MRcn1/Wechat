@@ -1,0 +1,78 @@
+<!--vues/user/user.wxml-->
+<view class="user">
+    <view class="top" bindtap='toPersonal'>
+        <image wx:if='{{status==0}}' class="img" src="https://cdn.lastmiles.cn/apps/6481763873694167040.png?size=5722"></image>
+        <image wx:if='{{status==1}}' class="img" src="{{data.avatarUrl}}"></image>
+        <view class="txt" wx:if='{{status==1}}'>
+            <p>{{data.nickName}}</p>
+            <p>{{data.phone}}</p>
+        </view>
+        <view class="txt2" wx:if='{{status==0}}'>
+            <p>点击登录/注册</p>
+        </view>
+    </view>
+
+    <view class="list">
+        <view class="box" wx:for='{{list}}' wx:key='' data-id="{{item.api}}" bindtap='torouter'>
+            <view class="" hover-class="none" hover-stop-propagation="false">
+                <image class="" src="{{item.url}}"></image>
+            </view>
+            <view class="order" hover-class="none" hover-stop-propagation="false">
+                <text class="">
+                    {{item.name}}
+                </text>
+            </view>
+            <view class="right" hover-class="none" hover-stop-propagation="false">
+                <image src="../images/right.png"></image>
+            </view>
+        </view>
+    </view>
+
+    <view class="tenant-model" wx-if='{{show}}'>
+
+    </view>
+
+    <view class="bac" wx-if='{{show}}'>
+        <text class="title">恭喜您获得 </text>
+        <text class="title">新人礼包一份</text>
+
+        <view class='bac-scroll'>
+            <view class='bac-box' wx:if="{{giveScore!=null}}">
+                <image src='https://cdn.lastmiles.cn/apps/6481422463258341376.png?size=1851'></image>
+                <text style='font-size: 58rpx;'>{{giveScore}}</text>
+                <text>咖豆</text>
+            </view>
+            <view class='bac-list' wx:for='{{discountCouponData}}'>
+                <view class='bac-list-zheneg'>
+                    <view class='bac-list-zheneg-big' wx:if="{{item.discountContentType==0}}">￥{{item.discountContentTypeAmount}}</view>
+                    <view class='bac-list-zheneg-big' wx:if="{{item.discountContentType==1}}">{{item.discountContentTypeAmount}}折</view>
+                    <view class='bac-list-zheneg-small'>满{{item.useCondition}}可用</view>
+                </view>
+                <view class='bac-list-fang'>
+                    <text class='bac-list-fang-big'>{{item.couponName}}</text>
+                    <text class='bac-list-fang-small'>{{item.startDeadlineDate}}-{{item.endDeadlineDate}}</text>
+					<text class='bac-list-fang-num' wx:if='{{item.everyoneGetStatus==0}}'>×{{item.quantity}}</text>
+					<text class='bac-list-fang-num' wx:if='{{item.everyoneGetStatus==1}}'>×{{item.everyoneGetNum}}</text>
+                </view>
+            </view>
+        </view>
+
+        <view class='bac-floor-box'>
+            <image class='bac-floor-box-img' src='https://cdn.lastmiles.cn/apps/6481429910198956032.png?size=23236'></image>
+            <view class='bac-floor-box-btn'>
+                <button bindtap='zhidao'>知道了</button>
+            </view>
+        </view>
+    </view>
+
+    <view class="img">
+        <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular="true"
+            indicator-active-color="#feb526" indicator-color='#fff'>
+            <block wx:for="{{swiperConfig}}" wx:key=''>
+                <swiper-item>
+                    <image src="{{item.imgUrl}}" class="swiper" width="100%" height="100%" data-id="{{index}}" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view>

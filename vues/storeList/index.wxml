@@ -1,0 +1,3 @@
+<view class='address' bindtap='onChangeAddress'>
+      {{address}}
+ </view>

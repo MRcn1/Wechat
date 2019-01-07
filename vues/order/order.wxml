@@ -1,0 +1,213 @@
+<!-- <wxs module="filters" src="./order.wxs"></wxs>
+
+<view>
+
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+
+  <view wx:if="{{show}}" style='background: #fff;min-height:1130rpx;'>
+
+    <view style='background:#f5f5f5'>
+      <view class='order' wx:for='{{data}}'>
+
+        <text class='title'>茶势力 ({{item.storeName}})</text>
+        <text class='payState' wx:if='{{item.orderStatus==0}}'>待付款</text>
+        <text class='payState' wx:if='{{item.orderStatus==1}}'>已取消</text>
+        <text class='payState' wx:if='{{item.orderStatus==2}}'>已支付</text>
+        <text class='payState' wx:if='{{item.orderStatus==3}}'>已完成</text>
+
+        <view class='box' bindtap='orderMessage' data-id='{{item.orderId}}' wx:for='{{item.productList}}' wx:for-item='items'>
+          <image class='left' src='{{items.productImages}}' mode='widthFix' wx:if='{{items.productImages}}'></image>
+          <image class='left' src='http://oss.life-go.cn/apps/6407867768338657280.png' mode='widthFix' wx:else></image>
+          <view class='center'>
+            <text class='first'>{{items.productName}}</text>
+            <text class='second' wx:if='{{items.productSpecContent}}'>{{items.productSpecContent}}</text>
+          </view>
+
+          <view class='right'>
+            <text class='first'>￥{{filters.toFix(items.price,2)}}</text>
+            <text class='second'>x{{items.quantity}}</text>
+          </view>
+        </view>
+
+        <view class='count'>
+          <text class='countone'>共{{item.quantityCount}}件商品</text>
+          <text class='counttwo'>合计:<text style='color:#fd803d'>￥{{!!item.amount?filters.toFix(item.amount,2):'0.00'}}</text></text>
+           
+        </view>
+
+        <view class='btn'>
+          <view class='btngroup'>
+            <text class='btnC cannel' catchtap='cannel' wx:if='{{item.orderStatus==0}}' data-index='{{index}}'>取消订单</text>
+            <text class='btnC pay' catchtap='pay' data-id='{{item.orderId}}' wx:if='{{item.orderStatus==0}}' data-index='{{index}}'>去支付</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view wx:if="{{!show}}">
+    <image mode='widthFix' class='titles' src='http://oss.life-go.cn/apps/6403050935513272320.png'></image>
+    <view class='btns'>
+      <navigator url='../placeOrder/index'>
+        <view>开始点单</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+ -->
+
+
+
+<wxs module="filters" src="./index.wxs"></wxs>
+
+<view>
+
+  <!-- 订单列表 -->
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+  <view class='tabC'>
+    <text class="btn123 {{typeAc==0?'active':''}}" bindtap='changeType' data-id='0'>全部</text>
+    <text class="btn123 {{typeAc==1?'active':''}}" bindtap='changeType' data-id='1'>未完成</text>
+    <text class="btn123 {{typeAc==2?'active':''}}" bindtap='changeType' data-id='2'>已完成</text>
+  </view>
+  <view wx:if="{{typeAc==0}}" style='background: #fff;min-height:1130rpx;'>
+    <image wx:if="{{data.length==0}}" mode='widthFix' class='titles' src='http://oss.life-go.cn/apps/6403050935513272320.png'></image>
+    <view style='background:#f5f5f5'>
+      <view class='order' wx:for='{{data}}'>
+
+        <text class='title'>羿玛咖啡 ({{item.storeName}})</text>
+        <text class='payState' wx:if='{{item.orderStatus==0}}'>待付款</text>
+        <text class='payState' wx:if='{{item.orderStatus==1}}'>已取消</text>
+        <text class='payState' wx:if='{{item.orderStatus==2}}'>待取餐</text>
+        <text class='payState' wx:if='{{item.orderStatus==3}}'>已完成</text>
+
+        <view class='box' bindtap='orderMessage' data-id='{{item.orderId}}' wx:for='{{item.productList}}' wx:for-item='items'>
+          <image class='left' src='{{items.productImages}}' mode='widthFix' wx:if='{{items.productImages}}'></image>
+          <image class='left' src='http://oss.life-go.cn/apps/6407867768338657280.png' mode='widthFix' wx:else></image>
+          <view class='center'>
+            <text class='first'>{{items.productName}}</text>
+            <text class='second' wx:if='{{items.productSpecContent}}'>{{items.productSpecContent}}</text>
+          </view>
+
+          <view class='right'>
+            <text class='first'>￥{{filters.toFix(items.price,2)}}</text>
+            <text class='second'>x{{items.quantity}}</text>
+          </view>
+        </view>
+
+        <view class='count'>
+          <text class='countone'>共{{item.quantityCount}}件商品</text>
+          <text class='counttwo'>合计:<text style='color:#fd803d'>￥{{!!item.amount?filters.toFix(item.amount,2):'0.00'}}</text></text>
+
+        </view>
+
+        <view class='btn'>
+          <view class='btngroup'>
+            <text class='btnC cannel' catchtap='cannel' wx:if='{{item.orderStatus==0}}' data-index='{{index}}'>取消订单</text>
+            <text class='btnC pay' catchtap='pay' data-id='{{item.orderId}}' wx:if='{{item.orderStatus==0}}' data-index='{{index}}'>去支付</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view wx:if="{{typeAc==1}}" style='background: #fff;min-height:1130rpx;'>
+    <image wx:if="{{undoneData.length==0}}" mode='widthFix' class='titles' src='http://oss.life-go.cn/apps/6403050935513272320.png'></image>
+    <view style='background:#f5f5f5'>
+      <view class='order' wx:for='{{undoneData}}'>
+
+        <text class='title'>羿玛咖啡 ({{item.storeName}})</text>
+        <text class='payState' wx:if='{{item.orderStatus==0}}'>待付款</text>
+        <text class='payState' wx:if='{{item.orderStatus==1}}'>已取消</text>
+        <text class='payState' wx:if='{{item.orderStatus==2}}'>待取餐</text>
+        <text class='payState' wx:if='{{item.orderStatus==3}}'>已完成</text>
+
+        <view class='box' bindtap='orderMessage' data-id='{{item.orderId}}' wx:for='{{item.productList}}' wx:for-item='items'>
+          <image class='left' src='{{items.productImages}}' mode='widthFix' wx:if='{{items.productImages}}'></image>
+          <image class='left' src='http://oss.life-go.cn/apps/6407867768338657280.png' mode='widthFix' wx:else></image>
+          <view class='center'>
+            <text class='first'>{{items.productName}}</text>
+            <text class='second' wx:if='{{items.productSpecContent}}'>{{items.productSpecContent}}</text>
+          </view>
+
+          <view class='right'>
+            <text class='first'>￥{{filters.toFix(items.price,2)}}</text>
+            <text class='second'>x{{items.quantity}}</text>
+          </view>
+        </view>
+
+        <view class='count'>
+          <text class='countone'>共{{item.quantityCount}}件商品</text>
+          <text class='counttwo'>合计:<text style='color:#fd803d'>￥{{!!item.amount?filters.toFix(item.amount,2):'0.00'}}</text></text>
+
+        </view>
+
+        <view class='btn'>
+          <view class='btngroup'>
+            <text class='btnC cannel' catchtap='cannel' wx:if='{{item.orderStatus==0}}' data-index='{{index}}'>取消订单</text>
+            <text class='btnC pay' catchtap='pay' data-id='{{item.orderId}}' wx:if='{{item.orderStatus==0}}' data-index='{{index}}'>去支付</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view wx:if="{{typeAc==2}}" style='background: #fff;min-height:1130rpx;'>
+    <image wx:if="{{completeData.length==0}}" mode='widthFix' class='titles' src='http://oss.life-go.cn/apps/6403050935513272320.png'></image>
+    <view style='background:#f5f5f5'>
+      <view class='order' wx:for='{{completeData}}'>
+
+        <text class='title'>羿玛咖啡 ({{item.storeName}})</text>
+        <text class='payState' wx:if='{{item.orderStatus==0}}'>待付款</text>
+        <text class='payState' wx:if='{{item.orderStatus==1}}'>已取消</text>
+        <text class='payState' wx:if='{{item.orderStatus==2}}'>待取餐</text>
+        <text class='payState' wx:if='{{item.orderStatus==3}}'>已完成</text>
+
+        <view class='box' bindtap='orderMessage' data-id='{{item.orderId}}' wx:for='{{item.productList}}' wx:for-item='items'>
+          <image class='left' src='{{items.productImages}}' mode='widthFix' wx:if='{{items.productImages}}'></image>
+          <image class='left' src='http://oss.life-go.cn/apps/6407867768338657280.png' mode='widthFix' wx:else></image>
+          <view class='center'>
+            <text class='first'>{{items.productName}}</text>
+            <text class='second' wx:if='{{items.productSpecContent}}'>{{items.productSpecContent}}</text>
+          </view>
+
+          <view class='right'>
+            <text class='first'>￥{{filters.toFix(items.price,2)}}</text>
+            <text class='second'>x{{items.quantity}}</text>
+          </view>
+        </view>
+
+        <view class='count'>
+          <text class='countone'>共{{item.quantityCount}}件商品</text>
+          <text class='counttwo'>合计:<text style='color:#fd803d'>￥{{!!item.amount?filters.toFix(item.amount,2):'0.00'}}</text></text>
+
+        </view>
+
+        <view class='btn'>
+          <view class='btngroup'>
+            <text class='btnC cannel' catchtap='cannel' wx:if='{{item.orderStatus==0}}' data-index='{{index}}'>取消订单</text>
+            <text class='btnC pay' catchtap='pay' data-id='{{item.orderId}}' wx:if='{{item.orderStatus==0}}' data-index='{{index}}'>去支付</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view wx:if="{{!show}}">
+    <image mode='widthFix' class='titles' src='http://oss.life-go.cn/apps/6403050935513272320.png'></image>
+    <view class='btns'>
+      <navigator url='../placeOrder/index'>
+        <view>开始点单</view>
+      </navigator>
+    </view>
+  </view> -->
+
+
+
+
+</view>

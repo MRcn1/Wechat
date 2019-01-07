@@ -1,0 +1,45 @@
+<!--vues/index/index.wxml-->
+<view class="index">
+    <view class="swiper">
+        <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular="true" indicator-active-color="#feb526" indicator-color='#fff'>
+            <block wx:for="{{swiperConfig}}" wx:key=''>
+                <swiper-item>
+                    <image src="{{item.imgUrl}}" class="swiper" width="100%" height="100%" data-id="{{index}}"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class='imma'>
+        <view class='left'>
+            <image src='https://cdn.lastmiles.cn/apps/6480323721440538624.png?size=2993'></image>
+        </view>
+        <view class='right'>
+            <p  wx:for='{{content}}' wx:key='' data-type='{{item.messageType}}' bindtap='messageclick'>
+                <text>{{item.messageContent}}</text>
+                <text class='time'>{{item.time}}</text>
+                <image src='https://cdn.lastmiles.cn/apps/6482089844951494656.png?size=2726'></image>
+            </p>
+        </view>
+    </view>
+
+    <view class="conten">
+        <view class="box" style="border-right: 1rpx solid #f0f0f0;border-bottom: 1rpx solid #f0f0f0;border-top-left-radius: 10rpx"  bindtap='toplaceOrder'>
+            <image class="" src="https://cdn.lastmiles.cn/apps/6481702433503326208.png?size=1917" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <text class="txt">下单</text>
+        </view>
+        <view class="box" style="border-bottom: 1rpx solid #f0f0f0;border-top-right-radius: 10rpx"   bindtap='topmyKaBao'>
+            <image class="" src="https://cdn.lastmiles.cn/apps/6481702488389988352.png?size=1954" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <text class="txt">卡包</text>
+        </view>
+        <view class="box" style="border-right: 1rpx solid #f0f0f0;border-bottom-left-radius: 10rpx" bindtap='scancode'>
+            <image class="" src="https://cdn.lastmiles.cn/apps/6481702334811353088.png?size=1802" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <text class="txt">扫一扫</text>
+        </view>
+        <view class="box" style="border-bottom-right-radius: 10rpx">
+            <image class="" src="https://cdn.lastmiles.cn/apps/6481702525174034432.png?size=2252" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <text class="txt" style='color:#dd8337'>敬请期待</text>
+        </view>
+    </view>
+
+</view>

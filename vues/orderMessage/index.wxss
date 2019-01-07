@@ -1,0 +1,420 @@
+/* pages/orderMessage/idnex.wxss */
+page{
+  background-color: #f5f5f5
+}
+.orderMessage{
+  min-height: 1215rpx;
+  background: #f5f5f5;
+}
+.codeBox{
+  height: 220rpx;
+  padding: 20rpx 40rpx;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.code{
+  width: 100%;
+  height: 212rpx;
+  border-radius: 10rpx;
+  zoom: 1;
+  overflow: auto;
+  background-color: #fff;
+  position: relative;
+  padding-top: 51rpx;
+  box-sizing: border-box;
+}
+.code .yiqucan{
+  width: 88rpx;
+  height: 104rpx;
+  position: absolute;
+  top: 46rpx;
+  left: 57rpx;
+}
+
+.code1{
+  width: 100%;
+  height: 212rpx;
+  border-radius: 10rpx;
+  zoom: 1;
+  overflow: auto;
+  background-color: #fff;
+}
+.code1 .img{
+  width: 58rpx;
+  height: 78rpx;
+  position: absolute;
+  left: 359rpx;
+  top: 32rpx;
+}
+
+.no{
+  /* background: url('http://oss.life-go.cn/apps/6402351011201044480.png') no-repeat; */
+  background-size: 100% 100%;
+}
+
+.yes{
+  /* background: url('http://oss.life-go.cn/apps/6402351425195626496.png') no-repeat; */
+  background-size: 100% 100%;
+  color: #999;
+}
+
+.code text{
+  display: inline-block;
+  width: 100%;
+  /* line-height: initial; */
+  text-align: center;
+   /* margin-left: 15%;  */
+  font-size: 50rpx;
+  font-size: 36rpx;
+}
+
+.code1 text{
+  display: inline-block;
+  width: 85%;
+  
+  /* line-height: initial; */
+  text-align: center;
+   margin-left: 10%; 
+  /* line-height: 110rpx; */
+  /* font-size: 50rpx; */
+  
+}
+
+.code1 .first{
+  height: 55%;
+  line-height: 180rpx;
+  font-weight: 700;
+  font-size: 36rpx;
+  margin-top: 31rpx;
+}
+
+.code1 .second{
+  font-size: 30rpx;
+  color: #999;
+}
+
+.message{
+  margin: 0 5%;
+  /* height: 100rpx; */
+  background: white;
+  zoom: 1;
+  overflow: auto;
+}
+
+.title{
+  display: block;
+  padding: 20rpx 20rpx 10rpx 20rpx;
+  border-bottom: 1px solid #cccccc;
+  font-size: 27rpx;
+  color: #8c8c8c;
+}
+
+.box{
+  margin:10rpx 20rpx 0 20rpx;
+  padding-bottom: 10rpx;
+  zoom: 1;
+  overflow: auto;
+  border-bottom: 1px solid #eaeaea;
+   min-height: 100rpx; 
+  
+}
+
+.box .left{
+  width: 60%;
+  float: left;
+
+}
+
+.box .left text{
+  display: inline-block;
+  width: 100%;
+  
+}
+.box .left .first{
+  font-size: 30rpx;
+  color: #333;
+}
+
+.box .left .second{
+  font-size: 27rpx;
+  color: #999;
+}
+
+.box .center{
+  width: 15%;
+  float: left;
+}
+
+.box .center .first{
+  font-size: 30rpx;
+  color: #999;
+}
+
+.box .right{
+  width: 25%;
+  float: right;
+  /* zoom: 1;
+  overflow: auto; */
+}
+
+.box .right .first{
+  font-size: 30rpx;
+  color: #333;
+}
+
+.box .right text{
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  
+}
+
+.box .center text{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.box .right image{
+  width: 35rpx;
+  height: 35rpx;
+  float: right;
+  position: relative;
+  top: 12rpx;
+  right: 10rpx;
+}
+
+.noBorder{
+  border: 0;
+}
+
+
+
+
+.box1{
+  margin:10rpx 20rpx 0 20rpx;
+  padding-bottom: 20rpx;
+  zoom: 1;
+  overflow: auto;
+  /* border-bottom: 1px solid #eaeaea; */
+  
+}
+
+.box1 .left{
+  width: 60%;
+  float: left;
+
+}
+
+.box1 .left text{
+  display: inline-block;
+  width: 100%;
+  
+}
+.box1 .left .first{
+  font-size: 28rpx;
+  color: #888;
+}
+
+.box1 .left .second{
+  font-size: 31rpx;
+  color: #333;
+}
+
+
+
+.box1 .right .second{
+  font-size: 32rpx;
+  color: #ff8746;
+   display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+.box1 .right{
+  width: 25%;
+  float: right;
+}
+
+.box1 .right .first{
+  font-size: 28rpx;
+  color: #888;
+   display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+
+.order{
+  margin: 0 5%;
+  /* height: 100rpx; */
+  background: white;
+  zoom: 1;
+  overflow: auto;
+  margin-top: 3%;
+  padding: 30rpx;
+}
+.order text{
+  font-size: 27rpx;
+  color: #666;
+  
+}
+.order .titles{
+  display: block;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10rpx;
+}
+
+.order .left{
+  display: inline-block;
+  width: 40%;
+
+}
+.order .right{
+  display: inline-block;
+  width: 60%;
+
+}
+
+.footer{
+  height: 110rpx;
+  margin:0 3%;
+  margin-top: 3%;
+  background: url('http://oss.life-go.cn/apps/6402409963150397440.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+
+
+.footer text{
+  display: block;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.codeBox2{
+  width: 675rpx;
+	height: 284rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: 25rpx;
+  margin-bottom: 15rpx;
+}
+
+.codeBox2 .icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 329rpx;
+  margin-top: 40rpx;
+}
+
+.codeBox2 .cannels{
+  font-size: 28rpx;
+  color: #333;
+  display: inline-block;
+  height: 40rpx;
+  margin-left: 305rpx;
+}
+
+
+.codeBox2 .right{
+  font-size: 28rpx;
+  color: #333;
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-left: 30rpx;
+  float: right;
+}
+
+.footerBtn{
+  margin: 0 5%;
+  height: 110rpx;
+  position: fixed;
+  bottom: 0;
+  width: 90%;
+  background: white;
+}
+
+.btnC{
+  display: inline-block;
+
+}
+.btngroup{
+  float: right;
+  margin-right: 30rpx;
+  
+  
+}
+
+.btnC{
+  width: 180rpx;
+  height: 60rpx;
+  font-size: 25rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  margin-top: 30rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  
+}
+
+.cannel{
+  border: 1px solid #999999;
+}
+
+.pay{
+  background: #ffc2a1;
+}
+
+.questions{
+  width: 100%;
+  /* height: 100rpx; */
+  float: left;
+  border-top: 1px dotted #eaeaea;
+  border-bottom: 1px dotted #eaeaea;
+  margin-top: 20rpx;
+  padding: 10rpx 0;
+}
+
+.questions text{
+  display: inline-block;
+  width: 100%;
+  font-size: 27rpx;
+  color: #999;
+}
+.codeBox2-df-btn{
+  width: 500rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: 35rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.codeBox2-df-btn button{
+  width: 188rpx;
+	height: 60rpx;
+	border-radius: 10rpx;
+  border: solid 1rpx #cccccc;
+  font-size: 26rpx;
+  line-height: 60rpx;
+}
+.codeBox .collectType{
+  position: absolute;
+  display: inline-block;
+  width: 88rpx;
+	height: 115rpx;
+  top: 75rpx;
+  right: 75rpx;
+}
+.codeBox .collectType image{
+    width: 100%;
+    height: 100%;
+}

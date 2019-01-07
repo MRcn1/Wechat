@@ -1,0 +1,24 @@
+<!--vues/logs/logs.wxml-->
+<view class="logs">
+    <view class="top">
+        <view class="img">
+            <image src="https://cdn.lastmiles.cn/apps/6483528158082510848.png?size=3801" alt="" />
+        </view>
+    </view>
+
+    <view class="cont">
+        <view class="phone">
+            <input value="{{phone}}" type="text" bindinput='phoneNumber' placeholder="请输入手机号码"  type="number"/>
+        </view>
+        <view class="pas">
+            <input value="{{code}}" type="text" placeholder="请输入手机验证码" bindinput='codeNumber'/>
+            <button wx:if="{{codeState == true}}" open-type="getUserInfo" lang="zh_CN" bindtap='sendCode'>获取验证码</button>
+            <button wx:if="{{codeState == false}}" bindtap='code'>重新发送({{minus}})</button>
+        </view>
+        <view class="determine">
+            <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">确定</button>
+        </view>
+    </view>
+
+
+</view>

@@ -1,0 +1,128 @@
+/* vues/index/index.wxss */
+
+page {
+    background-color: #e5e5e5;
+}
+
+.index {
+    background-color: #e5e5e5;
+}
+
+.swiper {
+    width: 100%;
+    height: 400rpx;
+}
+
+.imma {
+    width: 710rpx;
+    height: 125rpx;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 20rpx;
+    padding-top: 21rpx;
+    display: flex;
+    border-radius: 10rpx;
+}
+
+.imma .left {
+    width: 127rpx;
+    height: 78rpx;
+    margin-left: 30rpx;
+    margin-top: 15rpx;
+}
+
+.imma .left image {
+    width: 100%;
+    height: 100%;
+}
+
+.imma .right {
+    width: 515rpx;
+    height: 126rpx;
+    padding-left: 20rpx;
+    margin-top: -10rpx;
+    overflow: auto;
+}
+
+.imma .right p {
+    display: inline-block;
+    position: relative;
+    width: 500rpx;
+    margin-top: 10rpx;
+}
+
+.imma .right text {
+    display: inline-block;
+    width: 330rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 27rpx;
+}
+
+.imma .right .time {
+    width: 107rpx;
+    color: #ccc;
+}
+
+.imma .right image {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    right: 5rpx;
+    top: 3rpx;
+}
+
+.conten {
+    width: 652rpx;
+    height: 498rpx;
+    margin: 0 auto;
+    margin-top: 25rpx;
+    background-color: #e5e5e5;
+    border-radius: 10rpx;
+}
+
+.conten .box {
+    width: 50%;
+    height: 233rpx;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.conten .box image {
+    width: 73rpx;
+    height: 60rpx;
+    margin: 0 auto;
+    margin-top: 71rpx;
+    margin-left: 127rpx;
+}
+
+.conten .box .txt {
+    font-size: 28rpx;
+    color: #dd8337;
+    display: block;
+    text-align: center;
+    margin-top: 30rpx;
+    border-bottom: ;
+}
+
+/* .conten .box{
+    width: 263rpx;
+    height: 263rpx;
+    background-color: #fff;
+    border: 7px solid #803b36;
+    border-radius: 10px;
+    opacity: 0.66;
+}
+.conten .box .img{
+    width: 73rpx;
+    height: 63rpx;
+    margin:58rpx 0 0 96rpx;
+}
+.conten .box .txt{
+    display: inline-block;
+    width: 100%;
+    font-size: 28rpx;
+    text-align: center;
+} */

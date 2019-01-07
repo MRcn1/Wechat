@@ -1,0 +1,71 @@
+{
+	"pages": [
+		"vues/index/index", 
+		"vues/special/special",
+		"vues/redemption/redemption",
+		"vues/successful/successful",
+		"vues/order/order",
+		"vues/scoreShop/scoreShop",
+		"vues/placeOrder/index",
+		"vues/submitOrder/index",
+		"vues/myKaBao/myKaBao",
+		"vues/market/index",
+		"vues/giveTick/index",
+		"vues/code/index",
+		"vues/coupon/coupon",
+		"vues/maca/maca",
+		"vues/voucher/voucher",
+		"vues/logs/logs",
+		"vues/addTick/index",
+		"vues/orderMessage/index",
+		"vues/user/user",
+		"vues/activity/activity",
+		"vues/personal/personal",
+		"vues/storeList/index",
+		"vues/position/index",
+		"vues/tick/tick",
+	],
+	"window": {
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#471e1c",
+		"navigationBarTitleText": "羿码咖啡",
+		"navigationBarTextStyle": "#fff"
+	},
+	"tabBar": {
+		"color": "#ae7773",
+		"selectedColor": "#803b36",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "vues/index/index",
+				"iconPath": "vues/images/index.png",
+				"selectedIconPath": "vues/images/index2.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "vues/market/index",
+				"iconPath": "vues/images/dui1.png",
+				"selectedIconPath": "vues/images/dui2.png",
+				"text": "兑换"
+			},
+			{
+				"pagePath": "vues/activity/activity",
+				"iconPath": "vues/images/huodong1.png",
+				"selectedIconPath": "vues/images/huodong2.png",
+				"text": "活动"
+			},
+			{
+				"pagePath": "vues/user/user",
+				"iconPath": "vues/images/user1.png",
+				"selectedIconPath": "vues/images/user2.png",
+				"text": "我的"
+			}
+		]
+	},
+	"networkTimeout": {
+		"request": 10000,
+		"connectSocket": 10000,
+		"uploadFile": 10000,
+		"downloadFile": 10000
+	}
+}

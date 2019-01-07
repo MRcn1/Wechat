@@ -1,0 +1,48 @@
+<!--选择优惠券-->
+<view>
+    <view class='coupon-top'>
+        <view data-type='0' bindtap='activechange' class='{{actives==0?"active":""}}'>可用({{AvailableData.length}})</view>
+        <view data-type='1' bindtap='activechange' class='{{actives==1?"active":""}}'>不可用({{unavailableData.length}})</view>
+    </view>
+
+    <view wx:if='{{actives==0}}'>
+        <!-- <view class='coupon-selset'>
+            您已选中优惠券1张，共抵用¥30
+        </view> -->
+
+        <view class='coupon-list' wx:for="{{AvailableData}}">
+            <view class='coupon-list-zheng'>
+                <text class='coupon-list-big' wx:if='{{item.discountContentType==0}}'>￥{{item.discountContentTypeAmount}}</text>
+                <text class='coupon-list-big' wx:if='{{item.discountContentType==1}}'>{{item.discountContentTypeAmount}}折</text>
+                <text class='coupon-list-small'>满{{item.useCondition}}可用</text>
+            </view>
+            <view class='coupon-list-fang'>
+                <text class='coupon-list-fang-big'>{{item.couponName}}</text>
+                <text class='coupon-list-fang-small'>{{item.startDeadlineDate}}-{{item.endDeadlineDate}}</text>
+
+                <view class='coupon-list-img'>
+                    <image wx:if='{{index!=indexs}}' bindtap='changeimg' data-sel='0' data-index="{{index}}" src='https://cdn.lastmiles.cn/apps/6480719464663887872.png?size=1553'></image>
+                    <image wx:if='{{index==indexs}}' bindtap='changeimg' data-sel='1' data-index="{{index}}" src='https://cdn.lastmiles.cn/apps/6480719396653248512.png?size=2077'></image>
+                </view>
+            </view>
+        </view>
+
+        <view class='coupon-btn'>
+            <button bindtap='tosubmitOrder'>确定</button>
+        </view>
+    </view>
+
+    <view wx:if='{{actives==1}}' wx:for="{{unavailableData}}">
+        <view class='coupon-list'>
+            <view class='coupon-list-zheng'>
+                <text class='coupon-list-big' wx:if='{{item.discountContentType==0}}'>￥{{item.discountContentTypeAmount}}</text>
+                <text class='coupon-list-big' wx:if='{{item.discountContentType==1}}'>{{item.discountContentTypeAmount}}折</text>
+                <text class='coupon-list-small'>满{{item.useCondition}}可用</text>
+            </view>
+            <view class='coupon-list-fang'>
+                <text class='coupon-list-fang-big'>{{item.couponName}}</text>
+                <text class='coupon-list-fang-small'>{{item.startDeadlineDate}}-{{item.endDeadlineDate}}</text>
+            </view>
+        </view>
+    </view>
+</view>

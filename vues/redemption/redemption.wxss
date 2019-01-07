@@ -1,0 +1,99 @@
+/* vues/redemption/redemption.wxss */
+page {
+    background-color: #f5f5f5
+}
+
+.redemp-top {
+    width: 680rpx;
+    height: 263rpx;
+    background-image: url("https://cdn.lastmiles.cn/apps/6483145630184124416.png?size=2505");
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 25rpx;
+    position: relative;
+}
+
+.redemp-top-img {
+    width: 205rpx;
+    height: 205rpx;
+    margin-top: 14rpx;
+    vertical-align: middle;
+
+}
+
+.coupon-list-img {
+    width: 148rpx;
+    height: 115rpx;
+    position: absolute;
+    top: 55rpx;
+    right: 15rpx;
+}
+
+.redemp-top-txt {
+    font-size: 30rpx;
+    color: #333333;
+    margin-left: 60rpx;
+}
+
+.redemp-Introduction {
+    width: 100%;
+    background-color: #fff;
+    padding: 20rpx;
+    box-sizing: border-box;
+    margin-top: 17rpx;
+}
+
+.redemp-Introduction-title {
+    display: inline-block;
+    width: 114rpx;
+    height: 25rpx;
+    font-size: 26rpx;
+    vertical-align: top;
+    color: #333333;
+    vertical-align: top;
+}
+
+.redemp-Introduction-txt {
+    display: inline-block;
+    width: 534rpx;
+    color: #999999;
+    font-size: 26rpx;
+    margin-left: 10rpx;
+    vertical-align: top;
+}
+
+.redemp-code {
+    width: 750rpx;
+    height: 811rpx;
+    background-color: #ffffff;
+    margin-top: 10rpx;
+    overflow: hidden;
+}
+
+.redemp-code-txt {
+    text-align: center;
+    margin-top: 20rpx;
+    color: #333333;
+    font-size: 30rpx;
+}
+
+.redemp-code-yi {
+    width: 539rpx;
+    height: 175rpx;
+    margin: 0 auto;
+    margin-top: 37rpx;
+}
+
+.redemp-code-er {
+    width: 300rpx;
+    height: 300rpx;
+    margin: 0 auto;
+    margin-top: 37rpx;
+}
+
+.redemp-code-er-txt {
+    width: 100%;
+    text-align: center;
+    font-size: 26rpx;
+    margin-top: 10rpx;
+}

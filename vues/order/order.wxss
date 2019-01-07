@@ -1,0 +1,424 @@
+/* .order{
+  width: 100%;
+  zoom: 1;
+  overflow: auto;
+  background: #fff;
+  margin-bottom: 20rpx;
+
+}
+
+.order .title{
+  font-size: 28rpx;
+  color: #333;
+  padding: 0 30rpx;
+  display: inline-block;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.order .payState{
+  font-size: 25rpx;
+  color: #fd772f;
+  float: right;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 30rpx;
+  
+}
+
+.order .box{
+  padding: 15rpx 30rpx;
+  background: #f5f5f5;
+  zoom: 1;
+  overflow: auto;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.order .box .left{
+  
+}
+
+.order .box .left {
+  width: 20%;
+  float: left;
+  border: 1px solid #999999;
+  height: auto;
+}
+
+.order .box .center{
+  width: 50%;
+  float: left;
+  padding: 0 30rpx;
+}
+
+.order .box .center .first{
+  display: inline-block;
+   width: 100%; 
+  font-size: 28rpx;
+  color: #333;
+  height: 78rpx;
+
+ overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+}
+
+.order .box .center .second{
+  display: inline-block;
+   width: 100%; 
+  font-size: 25rpx;
+  color: #999;
+}
+
+
+.order .box .right{
+  width: 20%;
+  float: right;
+}
+
+.order .box .right .first{
+  display: inline-block;
+   width: 100%; 
+  font-size: 28rpx;
+  color: #333;
+  height: 78rpx;
+  text-align: right;
+
+  display:-webkit-box;
+display:-moz-box;
+overflow:hidden;
+text-overflow:ellipsis;
+word-break:break-all;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2;
+
+}
+
+.order .box .right .second{
+  display: inline-block;
+   width: 100%; 
+  font-size: 25rpx;
+  color: #999;
+  text-align: right;
+  
+}
+
+.count{
+  padding: 0 30rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  
+}
+
+.countone{
+  width: 60%;
+  text-align: right;
+  display: inline-block;
+}
+.counttwo{
+  width: 40%;
+  text-align: right;
+  display: inline-block;
+  
+}
+
+.btn{
+  padding: 0 30rpx;
+  
+}
+
+.btn .btnC{
+  display: inline-block;
+  margin-bottom: 20rpx;
+
+}
+
+.btngroup{
+  float: right;
+  
+}
+
+.btnC{
+  width: 180rpx;
+  height: 60rpx;
+  font-size: 25rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  margin-top: 15rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  
+}
+
+.cannel{
+  border: 1px solid #999999;
+}
+
+.pay{
+  background: #ffc2a1;
+}
+
+.titles{
+  font-size: 25rpx;
+  display: inline-block;
+  width: 100%;
+ 
+
+  text-align: center;
+
+  
+  
+}
+
+
+.btns{
+  width: 100%;
+  margin-top: 100rpx;
+}
+
+.btns view{
+  width: 78%;
+  background: url('http://oss.life-go.cn/apps/6400613975632924672.png') no-repeat;
+  background-size: 100% 100%;
+  height: 120rpx;
+  text-align: center;
+  line-height: 110rpx;
+  position: relative;
+  margin: 0 auto;
+  letter-spacing: 5rpx;
+  font-size: 30rpx;
+} */
+
+
+/* pages/order/index.wxss */
+
+.order{
+  width: 100%;
+  zoom: 1;
+  overflow: auto;
+  background: #fff;
+  margin-bottom: 20rpx;
+
+}
+
+.order .title{
+  font-size: 28rpx;
+  color: #333;
+  padding: 0 30rpx;
+  display: inline-block;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.order .payState{
+  font-size: 25rpx;
+  color: #fd772f;
+  float: right;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 30rpx;
+  
+}
+
+.order .box{
+  padding: 15rpx 30rpx;
+  /* height: 200rpx; */
+  background: #f5f5f5;
+  zoom: 1;
+  overflow: auto;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.order .box .left{
+  
+}
+
+.order .box .left {
+  width: 20%;
+  float: left;
+  border: 1px solid #999999;
+  height: auto;
+}
+
+.order .box .center{
+  width: 50%;
+  float: left;
+  padding: 0 30rpx;
+}
+
+.order .box .center .first{
+  display: inline-block;
+   width: 100%; 
+  font-size: 28rpx;
+  color: #333;
+  height: 78rpx;
+
+ overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+}
+
+.order .box .center .second{
+  display: inline-block;
+   width: 100%; 
+  font-size: 25rpx;
+  color: #999;
+}
+
+
+.order .box .right{
+  width: 20%;
+  float: right;
+  /* padding: 0 30rpx; */
+}
+
+.order .box .right .first{
+  display: inline-block;
+   width: 100%; 
+  font-size: 28rpx;
+  color: #333;
+  height: 78rpx;
+  text-align: right;
+
+  display:-webkit-box;
+display:-moz-box;
+overflow:hidden;
+text-overflow:ellipsis;
+word-break:break-all;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2;
+
+}
+
+.order .box .right .second{
+  display: inline-block;
+   width: 100%; 
+  font-size: 25rpx;
+  color: #999;
+  text-align: right;
+  
+}
+
+.count{
+  padding: 0 30rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  /* border-bottom: 1px solid #d8d6d6; */
+  
+}
+
+.countone{
+  width: 60%;
+  text-align: right;
+  display: inline-block;
+}
+.counttwo{
+  width: 40%;
+  text-align: right;
+  display: inline-block;
+  
+}
+
+.btn{
+  /* width: 100%; */
+  /* height: 90rpx; */
+  padding: 0 30rpx;
+  /* border-bottom: 1px solid #d8d6d6; */
+  
+}
+
+.btn .btnC{
+  display: inline-block;
+  margin-bottom: 20rpx;
+
+}
+
+.btngroup{
+  float: right;
+  
+}
+
+.btnC{
+  width: 180rpx;
+  height: 60rpx;
+  font-size: 25rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  margin-top: 15rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  
+}
+
+.cannel{
+  border: 1px solid #999999;
+}
+
+.pay{
+  background: #803B36;
+  color:#fff;
+}
+
+.titles{
+  font-size: 25rpx;
+  display: inline-block;
+  width: 100%;
+ 
+
+  text-align: center;
+
+  
+  
+}
+
+
+.btns{
+  width: 100%;
+  margin-top: 100rpx;
+}
+
+.btns view{
+  width: 78%;
+  background: #803B36;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  position: relative;
+  margin: 0 auto;
+  letter-spacing: 5rpx;
+  font-size: 30rpx;
+  color:#fff;
+  border-radius:10rpx;
+}
+.tabC{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+}
+.tabC .btn123{
+  height: 64rpx;
+  width: 247rpx;
+  border:1rpx solid #ccc;
+  font-size: 28rpx;
+  color:#333;
+  line-height: 64rpx;
+}
+/* .tabC .btn123:nth-child(1){
+  border-right:none;
+} */
+.tabC .active{
+  color:#fff;
+  background: #803B36;
+  border:1rpx solid #803B36;
+}

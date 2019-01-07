@@ -1,0 +1,173 @@
+<!--我的卡包-->
+<view class='myKaBao-top'>
+    <view data-type='0' bindtap='activechange' class='{{actives==0?"active":""}}'>未使用({{Unused}})</view>
+    <view data-type='1' bindtap='activechange' class='{{actives==1?"active":""}}'>使用记录({{Userecord}})</view>
+    <!-- <view data-type='2' bindtap='activechange' class='{{actives==2?"active":""}}'>已过期(3)</view> -->
+</view>
+
+<view wx:if='{{actives==0}}'>
+    <view wx:if='{{actives==0}}' class="active0">
+        <view class='coupon-list' bindtap='toscoreShop' wx:for='{{data}}' wx:if='{{item.useStatus==0 && item.couponType==2}}'
+            data-id="{{item.id}}">
+            <view class='coupon-list-zheng'>
+                <text class='coupon-list-big'>￥{{item.discountCouponData.discountContentTypeAmount}}</text>
+                <text class='coupon-list-small'>满{{item.discountCouponData.useCondition}}可用</text>
+            </view>
+
+            <view class='coupon-list-fang'>
+                <text class='coupon-list-fang-big'>{{item.couponName}}</text>
+                <text class='coupon-list-fang-small'>{{item.startDate}}-{{item.endDate}}</text>
+
+                <view class='coupon-list-img'>
+                </view>
+
+                <image class="coupon-list-fang-img" src="https://cdn.lastmiles.cn/apps/6483264645938294784.png?size=1710"></image>
+
+                <view class="coupon-list-fang-btn">
+                    <text class="" catchtap='use'>立即使用</text>
+                </view>
+            </view>
+        </view>
+
+        <view class='coupon-list' wx:for='{{data}}' wx:if='{{item.useStatus==0 && item.couponType==1}}' data-id="{{item.id}}"
+            bindtap='toredemption'>
+            <view class='coupon-list-zheng'>
+                <image class='img' src='{{item.exchangeProductImageUrl}}'></image>
+            </view>
+
+            <view class='coupon-list-fang coupon-list-fang-middle'>
+                <text class='coupon-list-fang-big'>{{item.couponName}}</text>
+                <!-- <text class='coupon-list-fang-small'>{{item.startDate}}-{{item.endDate}}</text> -->
+
+                <view class='coupon-list-img'>
+                    <image class="coupon-list-image" src="https://cdn.lastmiles.cn/apps/6483264645938294784.png?size=1710"></image>
+                </view>
+            </view>
+        </view>
+
+        <view class='coupon-list' wx:for='{{data}}' wx:if='{{item.useStatus==0 && item.couponType==0}}' data-id="{{item.id}}"
+            bindtap='toredemption'>
+            <view class='coupon-list-zheng'>
+                <image class='img' src='https://cdn.lastmiles.cn/apps/6482946789690322944.png?size=23088'></image>
+            </view>
+
+            <view class='coupon-list-fang coupon-list-fang-middle'>
+                <text class='coupon-list-fang-big'>HEJMO咖啡电子赠饮券</text>
+                <!-- <text class='coupon-list-fang-small'>{{item.startDate}}-{{item.endDate}}</text> -->
+
+                <view class='coupon-list-img'>
+                    <image class="coupon-list-image" src="https://cdn.lastmiles.cn/apps/6483264645938294784.png?size=1710"></image>
+                </view>
+            </view>
+        </view>
+
+        <view class='coupon-btn'>
+            <button bindtap='tosubmitOrder'>+添加优惠</button>
+        </view>
+    </view>
+</view>
+
+
+
+
+<view wx:if='{{actives==1}}' class='history  active0'>
+
+    <view class='coupon-list' bindtap='toscoreShop' wx:for='{{data}}' wx:if='{{item.useStatus==1 && item.couponType==2}}'
+        data-id="{{item.id}}">
+        <view class='coupon-list-zheng'>
+            <text class='coupon-list-big'>￥{{item.discountCouponData.discountContentTypeAmount}}</text>
+            <text class='coupon-list-small'>满{{item.discountCouponData.useCondition}}可用</text>
+        </view>
+
+        <view class='coupon-list-fang'>
+            <text class='coupon-list-fang-big'>{{item.couponName}}</text>
+            <text class='coupon-list-fang-small'>{{item.startDate}}-{{item.endDate}}</text>
+
+            <view class='coupon-list-img'>
+            </view>
+
+            <view class='coupon-list-img'>
+                <!-- 已使用 -->
+                <image bindtap='changeimg' data-sel='0' src='https://cdn.lastmiles.cn/apps/6480775205198245888.png?size=7577'></image>
+                <!-- 已赠送 -->
+                <image wx:if='{{false}}' bindtap='changeimg' data-sel='0' src='https://cdn.lastmiles.cn/apps/6480777838772367360.png?size=8110'></image>
+            </view>
+        </view>
+    </view>
+
+    <view class='coupon-list' wx:for='{{data}}' wx:if='{{item.useStatus==1 && item.couponType==1}}' data-id="{{item.id}}" bindtap='toredemption'>
+        <view class='coupon-list-zheng'>
+            <image class='img' src='{{item.exchangeProductImageUrl}}'></image>
+        </view>
+
+        <view class='coupon-list-fang coupon-list-fang-middle'>
+            <text class='coupon-list-fang-big'>{{item.couponName}}</text>
+            <!-- <text class='coupon-list-fang-small'>{{item.startDate}}-{{item.endDate}}</text> -->
+
+            <view class='coupon-list-img'>
+                <image bindtap='changeimg' data-sel='0' src='https://cdn.lastmiles.cn/apps/6480775205198245888.png?size=7577'></image>
+            </view>
+        </view>
+    </view>
+
+    <view class='coupon-list' wx:for='{{data}}' wx:if='{{item.useStatus==1 && item.couponType==0}}' data-id="{{item.id}}"
+            bindtap='toredemption'>
+            <view class='coupon-list-zheng'>
+                <image class='img' src='https://cdn.lastmiles.cn/apps/6482946789690322944.png?size=23088'></image>
+            </view>
+
+            <view class='coupon-list-fang coupon-list-fang-middle'>
+                <text class='coupon-list-fang-big'>HEJMO咖啡电子赠饮券</text>
+                <!-- <text class='coupon-list-fang-small'>{{item.startDate}}-{{item.endDate}}</text> -->
+
+                <view class='coupon-list-img'>
+                    <image bindtap='changeimg' data-sel='0' src='https://cdn.lastmiles.cn/apps/6480775205198245888.png?size=7577'></image>
+                </view>
+            </view>
+        </view>
+
+    <view class='coupon-btn'>
+        <button bindtap='tosubmitOrder'>+添加优惠</button>
+    </view>
+</view>
+
+
+
+
+<view wx:if='{{actives==2}}' class='history'>
+    <view class='coupon-list'>
+        <view class='coupon-list-zheng'>
+            <text class='coupon-list-big'>￥30</text>
+            <text class='coupon-list-small'>满100可用</text>
+        </view>
+
+        <view class='coupon-list-fang'>
+            <text class='coupon-list-fang-big'>优惠券名称优惠券名称</text>
+            <text class='coupon-list-fang-small'>2018.10.01-2018.10.21</text>
+
+            <view class='coupon-list-img'>
+                <image bindtap='changeimg' data-sel='0' src='https://cdn.lastmiles.cn/apps/6480778344651567104.png?size=8249'></image>
+            </view>
+        </view>
+    </view>
+
+    <view class='coupon-list'>
+        <view class='coupon-list-zheng'>
+            <image class='img' src='https://cdn.lastmiles.cn/apps/6480770716802232320.png?size=7066'></image>
+        </view>
+
+        <view class='coupon-list-fang'>
+            <text class='coupon-list-fang-big'>优惠券名称优惠券名称</text>
+            <text class='coupon-list-fang-small'>2018.10.01-2018.10.21</text>
+
+            <view class='coupon-list-img'>
+
+                <image bindtap='changeimg' data-sel='0' src='https://cdn.lastmiles.cn/apps/6480778344651567104.png?size=8249'></image>
+            </view>
+        </view>
+    </view>
+
+    <view class='coupon-btn'>
+        <button bindtap='tosubmitOrder'>+添加优惠</button>
+    </view>
+</view>

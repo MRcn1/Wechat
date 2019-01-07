@@ -1,0 +1,50 @@
+<view class='market'>
+    <view class='top'>
+        <image src='https://cdn.lastmiles.cn/apps/6480676909612019712.png?size=1616' mode='widthFix' class='leftImg'></image>
+        <text class='numbers'>{{score}} 咖豆</text>
+        <view class='rightBox' bindtap='tomaca'>
+            <!-- <image src='https://cdn.lastmiles.cn/apps/6480678768074567680.png?size=84789' mode='widthFix' class='rightImg'></image> -->
+            <image src='https://cdn.lastmiles.cn/apps/6480679889698566144.png?size=1394' mode='widthFix' class='more'></image>
+        </view>
+
+        <view class='center' wx:for='{{data}}'>
+            <view class='card'>
+                <image src='{{item.productImageUrl}}'  class='leftImg'></image>
+                <view class='centerBox'>
+                    <text class='title'>{{item.productName}}</text>
+                    <view class='bottoms'>
+                        <text class='left' data-type='1' data-id='{{item.id}}' bindtap='tovoucher'>查看详情</text>
+                        <text wx:if='{{item.quantity!=0}}' class='right' data-type='2' data-id='{{item.id}}' data-exchangeSource='{{item.exchangeSource}}' data-productName='{{item.productName}}' bindtap='tovoucher'>立即兑换</text>
+						<text wx:if='{{item.quantity==0}}' style='color:#ccc' class='right'>已抢完</text>
+                    </view>
+                </view>
+            </view>
+            <view class='topBox'>
+                <text class='big'>{{item.exchangeSource}}</text>
+                <text>咖豆</text>
+            </view>
+            <image src='https://cdn.lastmiles.cn/apps/6480688456736452608.png?size=2505' mode='heightFix' class='bottomImg'></image>
+        </view>
+
+        <view class='center'>
+            <view class='card'>
+                <view class='money'>
+                    <text>10元</text>
+                </view>
+                <view class='centerBox'>
+                    <text class='title'>10元全场通用券</text>
+                    <view class='bottoms'>
+                        <text class='left'>查看详情</text>
+                        <text class='right'>立即兑换</text>
+                    </view>
+                </view>
+            </view>
+            <view class='topBox'>
+                <text class='big'>99</text>
+                <text>咖豆</text>
+            </view>
+            <image src='https://cdn.lastmiles.cn/apps/6480693057011331072.png?size=2474' mode='heightFix' class='bottomImg'></image>
+        </view>
+
+    </view>
+</view>

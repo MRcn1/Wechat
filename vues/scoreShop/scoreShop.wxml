@@ -1,0 +1,45 @@
+<!--券详情-->
+<view class="voucher">
+    <view wx:if='{{type==1}}'>
+        <view class="voucher-header">
+            <view class='coupon-list' bindtap='toscoreShop'>
+                <view class='coupon-list-zheng'>
+                    <text class='coupon-list-big' wx:if='{{memberCouponData.discountContentType==0}}'>￥{{memberCouponData.discountContentTypeAmount}}</text>
+                    <text class='coupon-list-big'  wx:if='{{memberCouponData.discountContentType==1}}'>{{memberCouponData.discountContentTypeAmount}}折</text>
+                    <text class='coupon-list-small'>满{{memberCouponData.useCondition}}可用</text>
+                </view>
+
+                <view class='coupon-list-fang'>
+                    <text class='coupon-list-fang-big'>{{memberCouponData.couponName}}</text>
+                    <text class='coupon-list-fang-small'>{{memberCouponData.startDeadlineDate}}-{{memberCouponData.endDeadlineDate}}</text>
+                </view>
+                <image wx:if='{{memberCoupon.useStatus==1}}' class="coupon-list-img" src="https://cdn.lastmiles.cn/apps/6480775205198245888.png?size=7577" ></image>
+            </view>
+        </view>
+
+        <view class="voucher-cont">
+            <view class="voucher-cont-list">
+                <view class="voucher-cont-title">
+                    优惠说明：
+                </view>
+                <view class="voucher-cont-txt" style="white-space:pre-line;">{{useProductScope==0?"指定商品":"全部商品"}}，满{{memberCouponData.useCondition==null?' ':memberCouponData.useCondition}}元可用</view>
+            </view>
+            <view class="voucher-cont-list">
+                <view class="voucher-cont-title">
+                    有效期：
+                </view>
+                <view class="voucher-cont-txt" style="white-space:pre-line;">{{memberCouponData.startDeadlineDate==null?'':memberCouponData.startDeadlineDate}}-{{memberCouponData.endDeadlineDate==null?'':memberCouponData.startDeadlineDate}}</view>
+            </view>
+            <view class="voucher-cont-list">
+                <view class="voucher-cont-title">
+                    使用说明：
+                </view>
+                <view class="voucher-cont-txt" style="white-space:pre-line;">{{memberCouponData.useDescription==null?'空':memberCouponData.useDescription}}</view>
+            </view>
+
+            <view class="voucher-btn">
+                <button bindtap='result'>立即使用</button>
+            </view>
+        </view>
+    </view>
+</view>

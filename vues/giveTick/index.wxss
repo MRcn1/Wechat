@@ -1,0 +1,95 @@
+/* pages/giveTick/index.wxss */
+.giveTick{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left:0;
+  background: url('https://cdn.lastmiles.cn/apps/6480695564462731264.png?size=20786') no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+.giveTick .headImg{
+  width: 107rpx;
+	height: 107rpx;
+  background-color: #ddb667;
+	box-shadow: 0px 0px 9px 0px 
+		rgba(0, 0, 0, 0.67);
+  border-radius: 180px;
+  margin-top: 50rpx;
+}
+.giveTick .headImgs{
+  width: 107rpx;
+	height: 107rpx;
+  border-radius: 180px;
+  margin-top: 50rpx;
+}
+
+.giveTick .title{
+  display: block;
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 20rpx;
+}
+.giveTick .box{
+  height: 350rpx;
+  width: 644rpx;
+  background: url('https://cdn.lastmiles.cn/apps/6480698493533958144.png?size=4971') no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.box .money{
+  font-size: 60rpx;
+  color: #fff;
+  width: 100%;
+  margin-top: 40rpx;
+  display: inline-block;
+}
+.box .full{
+  font-size: 26rpx;
+  color: #fff;
+  width: 100%;  
+  display: inline-block;
+}
+
+.box .bottom{
+  font-size: 26rpx;
+  color: #333;
+  width: 100%;  
+  display: inline-block;
+  position: absolute;
+  bottom: 15rpx;
+  left: 0;
+}
+
+.inputs{
+  width: 529rpx;
+	height: 78rpx;
+	background-color: #ffffff;
+	border-radius: 10rpx;
+	border: solid 1px #cccccc;
+  font-size: 28rpx;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50rpx;  
+}
+
+.btn{
+  width: 529rpx;
+	height: 78rpx;
+	background-color: #803b36;
+	border-radius: 10rpx;
+	border: solid 1px #cccccc;
+  display: block;
+  line-height: 78rpx;
+  color: #fff;
+  font-size: 28rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50rpx;    
+}

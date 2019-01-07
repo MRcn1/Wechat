@@ -1,0 +1,53 @@
+<!--券详情-->
+<view class="voucher">
+    <view wx:if='{{type==1}}'>
+        <view class="voucher-header">
+            <view class="voucher-header-img">
+                <view class='center'>
+                    <view class='card'>
+                        <image src='{{data.productImageUrl}}' class='leftImg'></image>
+                        <view class='centerBox'>
+                            <text class='title'>{{data.productName}}</text>
+                        </view>
+                    </view>
+                    <view class='topBox'>
+                        <text class='big'>{{data.exchangeSource}}</text>
+                        <text>咖豆</text>
+                    </view>
+                    <image src='https://cdn.lastmiles.cn/apps/6480688456736452608.png?size=2505' mode='heightFix' class='bottomImg'></image>
+                </view>
+            </view>
+        </view>
+
+        <view class="voucher-cont">
+            <view class="voucher-cont-list">
+                <view class="voucher-cont-title">介绍说明:</view>
+                <view class="voucher-cont-txt" style="white-space:pre-line;">{{data.productDescription==null?'空':data.productDescription}}</view>
+            </view>
+            <!-- <view class="voucher-cont-list">
+                <view class="voucher-cont-title">有效期：</view>
+                <view class="voucher-cont-txt">{{data.createdDate}}</view>
+            </view> -->
+            <view class="voucher-cont-list">
+                <view class="voucher-cont-title">兑换说明:</view>
+                <view class="voucher-cont-txt" style="white-space:pre-line;">{{data.exchangeDesc==null?'空':data.exchangeDesc}}</view>
+            </view>
+            <view class="voucher-cont-list">
+                <view class="voucher-cont-title">使用须知:</view>
+                <view class="voucher-cont-txt" style="white-space:pre-line;">{{data.useDesc==null?'空':data.useDesc}}</view>
+            </view>
+
+            <view class="voucher-btn">
+                <button bindtap='result' wx:if='{{data.quantity!=0}}'>立即兑换</button>
+                <button wx:if='{{data.quantity==0}}' style='background-color:#ccc;'>已抢完</button>
+            </view>
+        </view>
+    </view>
+
+    <view wx:if='{{type==2}}'>
+        <image class="result-txt" src="https://cdn.lastmiles.cn/apps/6480688876552728576.png?size=4604" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
+        <view class="duihuan" >兑换成功</view>
+        <button class="result-btn" bindtap='tomarket' style="background-color: #ffffff;color: #803b36;">返回咖豆城</button>
+        <button class="result-btn" bindtap='touse' style="background-color: #803b36;;color: #ffffff;">立即使用</button>
+    </view>
+</view>

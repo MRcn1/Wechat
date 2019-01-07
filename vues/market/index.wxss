@@ -1,0 +1,157 @@
+.market {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+}
+
+.top {
+  height: 88rpx;
+  background-color: #fff;
+  line-height: 88rpx;
+  padding: 0 30rpx;
+}
+
+.top .leftImg {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.top .numbers {
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 10px;
+}
+
+.top .rightBox {
+  float: right;
+  height: 88rpx;
+}
+
+.top .rightBox .rightImg {
+  width: 74rpx;
+  height: 74rpx;
+  border-radius: 180rpx;
+  margin-top: 8rpx;
+  margin-right: 30rpx;
+  float: left;
+}
+
+.top .rightBox .more {
+  width: 20rpx;
+  float: left;
+  margin-top: 30rpx;
+}
+
+.center {
+  padding: 15rpx 0rpx;
+  position: relative;
+}
+
+.center .card {
+  height: 243rpx;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.center .card .leftImg {
+  width: 205rpx;
+  height: 205rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+
+.center .card .centerBox {
+  float: left;
+  margin-left: 20rpx;
+}
+
+.center .card .centerBox .title {
+  color: #333;
+  font-size: 32rpx;
+  width: 300rpx;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.center .topBox {
+  position: absolute;
+  right: 20rpx;
+  top: 10rpx;
+  width: 87rpx;
+  height: 99rpx;
+  background: url('https://cdn.lastmiles.cn/apps/6480684759344230400.png?size=1980') no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  z-index: 20;
+  color: #fff;
+}
+
+.center .bottoms {
+  position: absolute;
+  bottom: 0;
+  right: 50rpx;
+}
+
+.center .bottoms text {
+  display: inline;
+  font-size: 26rpx;
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+
+.center .bottoms .right {
+  margin-left: 70rpx;
+  color: #803b36;
+  border-bottom: 1px solid #803b36;
+}
+
+.center text {
+  font-size: 28rpx;
+  display: block;
+  line-height: 35rpx;
+}
+
+.center .big {
+  font-size: 36rpx;
+  width: 100%;
+  margin-top: 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.center .bottomImg {
+  height: 120rpx;
+  position: absolute;
+  bottom: 6rpx;
+  width: 100%;
+  z-index: 1;
+}
+
+.center .money {
+  background: url(https://cdn.lastmiles.cn/apps/6480693444527271936.png?size=7067) no-repeat;
+  background-size: 100% 100%;
+  width: 205rpx;
+  height: 205rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+
+.center .money text{
+  line-height: 205rpx;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 48rpx;
+  color: #fff;
+}

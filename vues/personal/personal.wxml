@@ -1,0 +1,32 @@
+<!--vues/personal/personal.wxml-->
+<view class="personal" hover-class="none" hover-stop-propagation="false">
+    <view class="list" wx:for='{{list}}' wx:key=''>
+        <view class="box">
+            <view class="order" hover-class="none" hover-stop-propagation="false">
+                <text class="name">
+                    {{item.name}}
+                </text>
+            </view>
+            <view wx:if='{{index==2}}' class="right" hover-class="none" hover-stop-propagation="false">
+                <image src="../images/right.png"></image>
+            </view>
+            <view wx:if='{{index==0}}' class="right" hover-class="none" hover-stop-propagation="false">
+                <image class="huodong" src="https://cdn.lastmiles.cn/apps/6480324483147116544.png?size=6802"></image>
+            </view>
+            <view wx:if='{{index==1 || index==3}}' class="right" hover-class="none" hover-stop-propagation="false">
+                <span class="txt">
+                    哈罗
+                </span>
+            </view>
+            <view wx:if='{{index==2}}' class="right" hover-class="none" hover-stop-propagation="false">
+                <span class="txt2">
+                   女
+                </span>
+            </view>
+        </view>
+    </view>
+
+    <view class="dropOut">
+        <button>退出登录</button>
+    </view>
+</view>

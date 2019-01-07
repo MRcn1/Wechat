@@ -1,0 +1,8 @@
+/* vues/special/special.wxss */
+.special-img{
+	width: 100%;
+	margin-top: 5rpx;
+}
+.special-img image{
+	width: 100%;
+}

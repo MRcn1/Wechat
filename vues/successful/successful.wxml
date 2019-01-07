@@ -1,0 +1,7 @@
+<view >
+    <image class="result-txt" src="https://cdn.lastmiles.cn/apps/6480688876552728576.png?size=4604" mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false"></image>
+    <view class="duihuan">添加成功</view>
+    <button class="result-btn" bindtap='tomarket' style="background-color: #ffffff;color: #803b36;">完成</button>
+    <button class="result-btn" style="background-color: #803b36;;color: #ffffff;">立即使用</button>
+</view>

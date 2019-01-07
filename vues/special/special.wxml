@@ -1,0 +1,6 @@
+<!--专题详情-->
+<view class='special'>
+	<view class='special-img' wx:for='{{45}}'>
+		<image src='https://cdn.lastmiles.cn/apps/6486862017461235712.jpg?size=242563'></image>
+	</view>
+</view>

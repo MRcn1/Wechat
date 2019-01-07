@@ -1,0 +1,27 @@
+<view class='giveTick'>
+  <!--  <view>
+    <image src='https://cdn.lastmiles.cn/apps/6480678768074567680.png?size=84789' class='headImg' ></image>
+    <text class='title'>来自<text style='color:#333'>微信昵称</text>的一张券</text>
+  </view>  -->
+  <!-- <view>
+    <image src='https://cdn.lastmiles.cn/apps/6480705916910972928.png?size=3984' class='headImgs'></image>
+    <text class='title' style='font-size:32rpx;'>您来晚了</text>
+    <text class='title'>很抱歉分享的优惠券领取前链接已过期，已无法领取!</text>
+  </view> -->
+   <view>
+    <image src='https://cdn.lastmiles.cn/apps/6480708431354277888.png?size=4286' class='headImgs'></image>
+    <text class='title' style='font-size:32rpx;'>您成功领取L的赠券一张</text>
+  </view>
+  <view class='box'>
+    <text class='money'> <text style='font-size:40rpx'>¥</text> 5元</text>
+    <text class='full'>满100元可用</text>
+    <text class='full'>2018-10-01-2018-10-21</text>
+    <text class='bottom'>仅可购买拿铁咖啡</text>
+  </view>
+  <!-- <view>
+    <input class='inputs' value='{{phone}}' placeholder='请输入手机号码' bindinput='phoneNumber' type="number"></input>
+    <text class='btn'>免费领取</text>
+  </view> -->
+  <!-- <text class='btn' style='margin-top:100rpx'>喝一杯，以解错失之痛</text> -->
+  <text class='btn' style='margin-top:150rpx'>立即喝一杯，为友谊干杯</text>
+</view>

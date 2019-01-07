@@ -1,0 +1,50 @@
+/* vues/logs/logs.wxss */
+.top{
+    width: 100%;
+    height: 380rpx;
+    overflow: hidden;
+}
+.top .img{
+    width: 254rpx;
+    height: 130rpx;
+    margin: 0 auto;
+    margin-top: 100rpx;
+}
+.top .img image{
+    width: 100%;
+    height: 100%;
+}
+.cont{
+    width: 100%;
+    height: 400rpx;
+}
+.phone,.pas,.determine{
+    width: 80%;
+    height: 70rpx;
+    margin: 0 auto;
+    margin-top: 50rpx;
+    font-size: 32rpx;
+    border-bottom: 3rpx solid #ccc;
+    position: relative;
+}
+.pas input{
+    display: inline-block;
+}
+.pas button{
+    width:224rpx;
+    font-size: 28rpx;
+    display: inline-block;
+    position: absolute;
+    right: 10rpx;
+    top: -10rpx;
+    border: 1rpx solid #803b36;
+    background-color: #fff;
+    color: #803b36;
+}
+.determine{
+    margin-top: 80rpx;
+}
+.determine button{
+    background-color: #803b36;
+    color: #fff;
+}

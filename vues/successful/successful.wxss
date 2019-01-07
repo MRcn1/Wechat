@@ -1,0 +1,19 @@
+/* vues/successful/successful.wxss */
+.result-txt{
+    width: 214rpx;
+    height: 201rpx;
+    margin: 271rpx 268rpx 0 268rpx;
+}
+.result-btn{
+    width: 594rpx;
+    height: 80rpx;
+    font-size: 30rpx;
+    margin-bottom: 32rpx
+}
+.duihuan{
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  margin-bottom: 268rpx;
+  margin-top: 10rpx;
+}

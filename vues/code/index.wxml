@@ -1,0 +1,18 @@
+
+<view class="container page">
+  <view class="panel" >
+    <view class="header">
+        <text>向商家展示取餐码</text>
+    </view>
+    <view class="barcode">
+      
+      <canvas canvas-id="barcode" bindtap='code' />
+      <text>取餐码{{code}}</text>
+    </view>
+    <view class="qrcode">
+      <canvas canvas-id="qrcode" />
+    </view>
+  </view>
+
+
+</view>

@@ -1,0 +1,265 @@
+<wxs module="filters" src="../order/order.wxs"></wxs>
+<view class='container'>
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+  <view style='height:20rpx;'></view>
+  <!-- <view class='center' >
+    <view class='box'>
+      <view class='top' style='border-bottom:0;padding-bottom:20rpx;'>
+        <view class='left' style='width:40%'>
+          <text class='first'>选择门店</text>
+        </view>
+
+
+
+        <view class='right' style='width:60%'>
+
+          <view class='pickerRight'>
+            <picker mode="selector" range="{{array}}" data-index='{{index}}' data-indexs='{{index}}' value="{{index}}" bindchange="listenerPickerSelected">
+              <view class="input">
+                <text class='data' style='color:#ff8746;margin-right:10rpx'>{{arrayss[index].storeName}}</text>
+                 <image src='http://oss.life-go.cn/apps/6401999666401005568.png' style='top:0;right:4rpx' wx:if='{{index<0}}'></image>
+              </view>
+            </picker>
+            
+          </view>
+
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+
+
+
+  <text class='title'>订单详情</text>
+  <view class='center' wx:for='{{data}}' wx:for-index='index'>
+    <view class='box'>
+      <view class='top'>
+        <view class='left'>
+          <text class='first'>{{item.name}}</text>
+          <text class='second' wx:if='{{item.rules}}'>{{item.rules}}</text>
+        </view>
+
+        <view class='centers'>
+          <text>x{{item.numbers}}</text>
+        </view>
+
+        <view class='right'>
+          <text>￥{{item.salePrice}}</text>
+        </view>
+      </view>
+
+      <view class='zfq'>
+        <view class='dddd' data-id='{{index}}' bindtap='show'>
+          <image class='leftImg' src='http://oss.life-go.cn/apps/6408151972305711104.png'></image>
+          <text style='margin-left:20rpx'>我有话要说</text>
+          <image class='rightImg' src='http://oss.life-go.cn/apps/6408149440586067968.png'></image>
+        </view>
+
+        <view class='zfqBox' wx:if="{{item.state==true}}" wx:for='{{item.messageIndex}}' wx:for-item='items'
+          wx:for-index='indexs'>
+          <view class='box1'>
+            <text class='title1'>留言{{items}}</text>
+
+            <radio-group bindchange="listenerRadioGroup" data-index='{{indexs}}' data-indexs='{{index}}' class='radio-group'>
+              <label wx:for-items="{{arrays}}">
+                <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+              </label>
+            </radio-group>
+            <view style='height:110rpx;'>
+              <view hidden='{{show}}'>
+                <textarea class='textarea' wx:if="{{item.message[indexs].state==0}}" placeholder="WO无所不知，没有什么事瞒住WO"
+                  bindinput='bindDec' data-index='{{indexs}}' maxlength='20' data-indexs='{{index}}'></textarea>
+                <textarea class='textarea' wx:if="{{item.message[indexs].state==1}}" placeholder="再不表白，TA就是别人的了，快写下你想对TA说的话吧"
+                  bindinput='bindDec' maxlength='20' data-index='{{indexs}}' data-indexs='{{index}}'></textarea>
+              </view>
+              <view class='textarea' hidden='{{!show}}'>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='center' style='margin-bottom:0;'>
+    <view class='box'>
+      <view class='top' style='border-bottom:0;padding-bottom:20rpx;'>
+        <view class='left'>
+          <text class='first'>商品总价</text>
+        </view>
+
+        <view class='centers'>
+          <text></text>
+        </view>
+
+        <view class='right'>
+          <text style='color:#ff8746'>￥{{money}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='center' style='padding-bottom:5px;zoom:1;overflow:auto;padding-top:0;margin-bottom:0;' wx:if='{{!tickStatus}}'>
+    <image src='https://cdn.lastmiles.cn/apps/6432792845270134784.png' class='icon'></image>
+    <view class='{{clickStatus?"viewBtn":"viewBtn"}}' bindtap='add'>添加优惠券 > </view>
+  </view>
+
+
+  
+
+
+
+  <view class='center' style='margin-bottom:0;margin-top:0;' wx:if='{{tickStatus}}'>
+    <view class='box'>
+      <view class='top' style='border-bottom:0;padding-bottom:20rpx;'>
+        <view class='left'>
+          <text class='first'>优惠</text>
+        </view>
+
+        <view class='centers'>
+          <text></text>
+        </view>
+
+        <view class='right'>
+          <text style='color:#ff8746'>-￥{{dataMoney}}</text>
+          <text class='close' bindtap='close'>x</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='center' style='margin-bottom:0;margin-top:0;'>
+    <view class='box'>
+      <view class='top' style='border-bottom:0;padding-bottom:20rpx;'>
+        <view class='left'>
+          <text class='first'>实付款</text>
+        </view>
+
+        <view class='centers'>
+          <text></text>
+        </view>
+
+        <view class='right'>
+          <text style='color:#ff8746'>￥{{money-dataMoney>0?filters.toFix(money-dataMoney,2):'0.01'}}</text>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+
+
+
+  <view class="cont-top" hover-class="none" hover-stop-propagation="false">
+    <view class="cont-top-one">
+      <text class="txt">立即取餐:</text>约{{H}}:{{m}}可取
+    </view>
+    <!-- <view class="cont-top-one">
+      <text class="txt">取餐地址:</text><text class="txt" style="color: #333333;">广州市天河区科韵路18号</text>
+    </view> -->
+    <view class="cont-top-one">
+      <text class="txt">用餐方式:</text><text data-type="0" bindtap='changeactive' class="{{active==0?'active':'dian'}}">店内用餐</text><text
+        data-type="1" bindtap='changeactive' class="{{active==1?'active2':'da'}}">打包带走</text>
+    </view>
+  </view>
+
+  <view class="cont-xiang">
+    <view class="cont-xiang-list" wx:for='{{data}}'>
+      <view class="cont-xiang-name">
+        {{item.name}}
+        <text class="num">×{{item.numbers}}</text>
+        <text class="price">×{{item.salePrice}}</text>
+      </view>
+      <view class="cont-xiang-sku" wx:if='{{item.rules}}'>{{item.rules}}</view>
+    </view>
+  </view>
+
+  <view class="cont-Offer">
+    <view class="cont-Offer-list1" bindtap='tocoupon'>
+      <text class="">使用优惠券</text>
+      <text class='cont-Offer-list1-yiselet' wx:if='{{yhshow}}'>已选1张</text>
+      <text class='cont-Offer-list1-yiselet' wx:if="{{AvailableData.length!=0 && !yhshow}}">{{AvailableData.length}}张可用</text>
+      <text class='cont-Offer-list1-yiselet2' wx:if="{{AvailableData.length==0 && !yhshow}}">无可用券</text>
+      <text class="cont-Offer-list1-mon" wx:if='{{yhshow}}'>-￥{{offerPrice}}</text>
+      <text class="cont-Offer-list1-rig">></text>
+    </view>
+    <!-- <view class="cont-Offer-list2">
+      咖豆 共2000咖豆，可用1000咖豆，抵¥10
+      <switch class="cont-Offer-checkbox" type='checkbox' checked bindchange="switch1Change" />
+    </view> -->
+    <view class="cont-Offer-list2" wx:if='{{active==1 && baopricr!=0}}'>
+      特殊包装
+      <text class="cont-Offer-list2-bao">￥{{baopricr}}</text>
+      <switch class="cont-Offer-checkbox" type='checkbox'  bindchange="switch1Change" />
+    </view>
+  </view>
+
+  <view class="cont-netPrice">
+    <view class="cont-netPrice-list">
+      <text class="">商品总价</text>
+      <text class="cont-netPrice-list-right">￥{{money}}</text>
+    </view>
+    <view class="cont-netPrice-list" wx:if='{{yhshow}}'>
+      <text class="">优惠券</text>
+      <text class="cont-netPrice-list-right">-￥{{offerPrice}}</text>
+    </view>
+    <view class="cont-netPrice-list" wx:if='{{active==1 && tsbaoz}}'>
+      <text class="">包装费</text>
+      <text class="cont-netPrice-list-right">+￥{{packagePrice}}</text>
+    </view>
+    <!-- <view class="cont-netPrice-list" wx:if='{{false}}'>
+      <text class="">咖豆</text>
+      <text class="cont-netPrice-list-right">-￥10.00</text>
+    </view> -->
+    <view class="cont-netPrice-list">
+      <text class="">实付款</text>
+      <text class="cont-netPrice-list-right2"><text>￥</text>{{money-dataMoney+packagePrice-offerPrice>0?filters.toFix(money-dataMoney+packagePrice-offerPrice,2):'0.01'}}</text>
+    </view>
+  </view>
+
+  <view class="cont-dec">
+    <text class="cont-dec-text">备注特殊要求:</text>
+    <view class="cont-dec-input">
+      <textarea bindinput='inputremark' placeholder="饮品中规格请看订单详情中的显示，若有其他要求，则在此处备注" />
+      </view>
+  </view>
+
+
+
+  <!-- 底部 -->
+  <view class='bottomBox'>
+    <view class='leftBox'>
+      <view class='leftImgbox'>
+        <image class='img' src='http://oss.life-go.cn/apps/6401676426071789568.png' bindtap='show'></image>
+
+      </view>
+
+      <text class='ttee'>￥{{money-dataMoney+packagePrice-offerPrice>0?filters.toFix(money-dataMoney+packagePrice-offerPrice,2):'0.01'}}</text>
+    </view>
+    <view class='rightBox' bindtap='over'>
+      <form bindsubmit="submitInfo" report-submit='true' class='ttee'>
+        <button form-type="submit" style='background:#ffc2a1'>
+          <text class='ttee'>支付</text>
+        </button>
+      </form>
+    </view>
+  </view>
+
+
+  <view class='dialog' wx:if='{{show}}'>
+    <view class='box'>
+      <text class='title'>添加优惠码 </text>
+      <image src='http://oss.life-go.cn/apps/6401684233584136192.png' bindtap='hide'></image>
+
+      <text class='centers'>选择输入券码方式</text>
+
+      <view class='bottom'>
+        <text style='border-right:1px solid #ccc;' bindtap='addTick'>手动输入</text>
+        <text bindtap='ss'>扫一扫</text>
+      </view>
+    </view>
+  </view>
+</view>

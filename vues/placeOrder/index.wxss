@@ -1,0 +1,506 @@
+/* pages/placeOrder/index.wxss */
+.contant {
+  height: 100%;
+}
+
+.left {
+  width: 25%;
+  height: 1120rpx;
+  background: #f5f5f5;
+  margin-bottom: 100rpx;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* margin-top: 122rpx; */
+}
+
+.left .li {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #888;
+}
+.old {
+  color: #b0b0b0;
+  font-size: 24rpx;
+  text-decoration: line-through;
+  margin-left: 20rpx; 
+}
+
+.left .li.active {
+  background: white;
+  color: #333;
+}
+
+.right {
+  
+}
+
+page {
+  height: 100%;
+}
+
+.scr {
+  position: fixed;
+  left: 25%;
+  top: 0;
+  width: 75%;
+  height: 91%;
+  /* margin-top: 123rpx; */
+  /* width: 75%;
+    height: 100%; */
+}
+
+.bar {
+  height: 100rpx;
+  font-size: 28rpx;
+  color: #5c5c5c;
+  line-height: 101rpx;
+  margin-left: 5%;
+}
+
+.contants {
+  width: 100%;
+  /* height: 200rpx; */
+  zoom: 1;
+  overflow: auto;
+  height: 190rpx;
+}
+
+.contants image {
+  width: 30%;
+  border: 1px solid #eee;
+  margin-left: 5%;
+  float: left;
+  margin-right: 5%;
+  height: auto;
+}
+
+.contants .rights {
+  width: 55%;
+  float: left;
+}
+.overauto{
+  height: 415rpx;
+  overflow: auto;
+}
+
+.contants .rights .text {
+  font-size: 28rpx;
+  color: #666;
+  display: inline-block;
+  height: 80rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.contants .bottoms {
+  margin-top: 20rpx;
+  zoom: 1;
+  overflow: auto;
+}
+
+.contants .bottoms .money {
+  color: #ff673e;
+  font-size: 25rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+}
+
+.contants .bottoms .moneyBig {
+  font-size: 30rpx;
+}
+
+.contants .bottoms .mark {
+  /* min-width: 150rpx; */
+  float: right;
+  height: 80rpx;
+  max-width: 200rpx;
+  /* line-height: 80rpx; */
+}
+
+.pluss {
+  display: inline-block;
+  /* padding: 20rpx; */
+  background-color: #ffc2a1;
+  /* line-height: 80rpx;  */
+  height: 40rpx;
+  width: 40rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  line-height: 33rpx;
+  border-radius: 180rpx;
+}
+
+.minus {
+  display: inline-block;
+  /* padding: 20rpx; *//* background-color: #ffc2a1; *//* line-height: 80rpx;  */
+  height: 40rpx;
+  width: 40rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  line-height: 33rpx;
+  border-radius: 180rpx;
+  border: 1px solid #888;
+}
+
+.mark .number {
+  font-size: 30rpx;
+  color: #666;
+  min-width: 35rpx;
+  display: inline-block;
+  text-align: center;
+  margin: 0 18rpx;
+}
+
+.bottomBox {
+  position: fixed;
+  width: 100%;
+  height: 120rpx;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.bottomBox .leftBox {
+  width: 70%;
+  background: #3a322d;
+  height: 100rpx;
+  float: left;
+  margin-top: 20rpx;
+  color: white;
+  text-align: center;
+}
+
+.bottomBox .rightBox {
+  width: 30%;
+  background: #ffc2a1;
+  height: 100rpx;
+  float: left;
+  margin-top: 20rpx;
+  color: #333;
+  text-align: center;
+}
+
+.bottomBox .rightBox text {
+  display: inline-block;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+
+.bottomBox .leftBox .ttee {
+  display: inline-block;
+  width: 70%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  margin-left: 30%;
+  text-align: left;
+}
+
+.leftBox .leftImgbox {
+  position: absolute;
+  left: 30rpx;
+  bottom: 20rpx;
+}
+
+.leftBox .img {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.leftBox .leftImgbox text {
+  font-size: 18rpx;
+  display: inline-block;
+  color: white;
+  background-color: #e53417;
+  padding: 5rpx 7rpx;
+  border-radius: 180rpx;
+  text-align: center;
+  min-width: 20rpx;
+  position: absolute;
+  top: 0;
+  right: 0rpx;
+}
+
+.rule {
+  position: fixed;
+  width: 100%;
+  height: 101%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  margin-top: -10rpx;
+}
+
+.ruleBox {
+  width: 85%;
+  /* height: 200rpx; */
+  position: relative;
+  margin: 0 auto;
+  background: rgb(255, 255, 255);
+  margin-top: 20%;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.ruleBox image{
+  width: 100%;
+  height: 100%;
+}
+.ruleBox .img{
+  width: 100%;
+	height: 318rpx;
+}
+.ruleBox .title {
+  /* text-align: center; */
+  width: 100%;
+   height: 100%; 
+  /* line-height: 80rpx; */
+  display: inline-block;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  /* position: relative; */
+  color: #333;
+}
+.product-description{
+  width: 90%;
+  font-size: 22rpx;
+  color: #999999;
+  padding-left: 31rpx;
+}
+.product-description-title{
+  display: inline-block;
+  vertical-align: top;
+}
+.product-description-name{
+  display: inline-block;
+  width: 367rpx;
+	height: 52rpx;
+}
+.ruleBox .title image {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 55rpx;
+  top: 42rpx;
+}
+
+.ruleBox .btnGroup {
+  width: 100%;
+  margin-top: 10rpx;
+}
+
+.ruleBox .btnGroup .btnTitle {
+  color: #666;
+  font-size: 25rpx;
+  padding-left: 20rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  display: inline-block;
+}
+
+.ruleBox .btnGroup .btnBox {
+  /* padding: 0 30rpx;  */
+  padding-right: 20rpx;
+}
+
+.ruleBox .btnGroup .btnBox text {
+  /* min-width: 25%; */
+  display: inline-block;
+  height: 60rpx;
+  border: 1px solid #bbb;
+  font-size: 25rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  color: #666;
+}
+
+.rulemoney {
+  height: 80rpx;
+  margin-top: 20rpx;
+  width: 100%;
+  zoom: 1;
+  overflow: auto;
+  padding-bottom: 20rpx;
+  line-height: 70rpx;
+}
+
+.rulemoney .textleft {
+  margin-left: 20rpx;
+  font-size: 22rpx;
+  color: #ff673e;
+  display: inline-block;
+}
+
+.rulemoney .textright {
+  display: inline-block;
+  width: 250rpx;
+  font-size: 25rpx;
+  text-align: center;
+  background-color: #ffc2a1;
+  border-radius: 100rpx;
+  float: right;
+  margin-right: 40rpx;
+  margin-top: 5rpx;
+}
+
+.btnBox text.active {
+  background: #fef3ed;
+  border: 1px solid #ffc2a1 !important;
+  color: #fa9762!important;
+}
+
+.message {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+
+.messageBox {
+  width: 100%;
+  background: #fff;
+  /* height: 100rpx; */
+  position: fixed;
+  bottom: 100rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.messageBox .titles {
+  width: 100%;
+  height: 60rpx;
+  display: inline-block;
+  background-color: #f5f5f5;
+  padding: 0 20rpx;
+  /* line-height:  */
+  line-height: 60rpx;
+}
+
+.titles .ttttext {
+  font-size: 22rpx;
+  /* line-height: 60rpx; */
+  color: #888;
+  /* display: inline-block; */
+  border-left: 10rpx solid #ffc2a1;
+  padding-left: 10rpx;
+}
+
+.titleRight {
+  float: right;
+  width: 200rpx;
+  line-height: 60rpx;
+  /* height: 60rpx; */
+}
+
+.titleRight image {
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  top: 8rpx;
+}
+
+.titleRight text {
+  font-size: 22rpx;
+  display: inline-block;
+  color: #999;
+  margin-left: 10rpx;
+}
+
+.listBox {
+  width: 100%;
+  /* height: 100rpx; */
+  zoom: 1;
+  overflow: auto;
+}
+
+.listBoxLeft {
+  width: 52%;
+  padding: 20rpx 20rpx;
+  /* height: 100rpx; */
+  float: left;
+}
+
+.listBoxLeft .title1 {
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.listBoxLeft .title2 {
+  display: block;
+  width: 100%;
+  font-size: 23rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+.listBoxLeft .title3 {
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  color: #666;
+
+  line-height: 70rpx;
+}
+.listBoxCenter {
+  width: 15%;
+  float: left;
+  height: 100rpx;
+}
+
+.listBoxCenter text {
+  font-size: 28rpx;
+  line-height: 110rpx;
+}
+
+.listBoxRight {
+  width: 25%;
+  float: right;
+  height: 110rpx;
+  line-height: 110rpx;
+}
+
+.boxss{
+  max-height: 500rpx;
+  overflow: auto;
+}
+.cantop{
+  width: 100%;
+  height: 103rpx;
+  padding-left: 70rpx;
+  padding-top: 10rpx;
+}
+.cantop-title{
+  font-size: 28rpx;
+  color: #333333;
+  display: block;
+
+}
+.cantop-txt{
+  font-size: 24rpx;
+  color: #999999;
+  display: block;
+}
+/* .cantop-line{
+  width: 100%;
+  height: 10rpx;
+  background-color: #f5f5f5;
+} */

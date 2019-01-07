@@ -1,0 +1,29 @@
+<!-- 兑换凭证 -->
+<view class="redemp-top">
+    <image class="redemp-top-img" src="{{memberCouponData.productImageUrl}}"></image>
+    <text class="redemp-top-txt">{{memberCouponData.productName}}</text>
+    <image wx:if='{{memberCoupon.useStatus==1}}' class="coupon-list-img" src="https://cdn.lastmiles.cn/apps/6480775205198245888.png?size=7577"></image>
+    <image wx:if="{{memberCoupon.useStatus==1}}" class="coupon-list-img" src="https://cdn.lastmiles.cn/apps/6483514508584169472.png?size=7577"></image>
+
+</view>
+
+<view class="redemp-Introduction">
+    <text class="redemp-Introduction-title">介绍说明:</text>
+    <view class="redemp-Introduction-txt">
+        <text class="redemp-Introduction-txt" style="white-space:pre-line;">{{memberCouponData.useDesc1}}</text>
+        <text class="redemp-Introduction-txt">{{memberCouponData.useDesc2}}</text>
+    </view>
+</view>
+
+<view class="redemp-code">
+    <view class="redemp-code-txt">
+        使用时请向店员出示二维码或券码
+    </view>
+    <view class="redemp-code-yi">
+        <canvas canvas-id="barcode" bindtap='code' />
+    </view>
+    <view class="redemp-code-er">
+        <canvas canvas-id="qrcode" />
+    </view>
+    <view class="redemp-code-er-txt">{{id}}</view>
+</view>

@@ -1,0 +1,17 @@
+<view>
+  <view class='top'>
+    <text class='text' style='color:#888;margin-bottom:20rpx;' >券码：{{code}}</text>
+    <text class='text' style='font-size:32rpx;'>券面值 <text style='color:red'>￥{{tickMoney}}</text>已大于或等于订单金额<text style='color:red'>￥{{money}}</text></text>
+     <text class='text' style='font-size:32rpx;'>因支付金额不能为0，抵扣后您仍需支付 <text style='color:red'>￥0.01</text></text>
+    <text class='text' style='color:#888;' >每张优惠券仅限使用一次，不找零、不兑换现金</text>
+  </view>
+
+  <view class='btn'> 
+      <view class='view' bindtap='over'>确认使用</view>
+  </view>
+
+   <view class='btn' style='margin-top:50rpx;'> 
+      <view class='cannel' bindtap='cannel'>不使用优惠券</view>
+  </view>
+
+</view>

@@ -1,0 +1,74 @@
+<!--vues/activity/activity.wxml-->
+<view class="activity">
+    <view class="top">
+        <text class="{{index==0?'active':'tabs'}}" data-index="0" bindtap='active'> 活动公告 </text>
+        <text class="{{index==1?'active':'tabs'}}" data-index="1" bindtap='active'> 咖啡学院课程 </text>
+        <text class="{{index==2?'active':'tabs'}}" data-index="2" bindtap='active'> 公益分享 </text>
+    </view>
+
+    <view class="activity" wx:if='{{index==0}}'>
+        <view class='air' wx:if='{{data.length==0}}'>空</view>
+        <view class="box" wx:for="{{data}}" data-id='{{item.id}}' bindtap='tospecial'>
+            <view class="head">
+                <image class="img" src="https://cdn.lastmiles.cn/apps/6486850525391237120.png?size=16988"></image>
+                <text class="actxtt">羿玛活动</text>
+                <view class="officialnumber">官方号</view>
+            </view>
+            <view class="middle">
+                <image class="img" src="{{item.subjectImg}}"></image>
+            </view>
+            <view class="bottem">
+                <text class="actxtt">{{item.subjectTitle}}</text>
+                <view class="zan" data-id='{{item.id}}' data-index='{{index}}'  catchtap='clickForXcx'>
+                    <image wx:if='{{item.clickStatus==1}}' class="" src="https://cdn.lastmiles.cn/apps/6480324118091673600.png?size=1598"></image>
+                    <image wx:if='{{item.clickStatus==0}}'  class="" src="https://cdn.lastmiles.cn/apps/6480324179907325952.png?size=1480"></image>
+                    <text>{{item.clickNum}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="activity" wx:if='{{index==1}}'>
+        <view class='air' wx:if='{{data.length==0}}'>空</view>
+        <view class="box" wx:for="{{data}}"  data-id='{{item.id}}' bindtap='tospecial'>
+            <view class="head">
+                <image class="img" src="https://cdn.lastmiles.cn/apps/6486850525391237120.png?size=16988"></image>
+                <text class="actxtt">羿玛活动</text>
+                <view class="officialnumber">官方号</view>
+            </view>
+            <view class="middle">
+                <image class="img" src="{{item.subjectImg}}"></image>
+            </view>
+            <view class="bottem">
+                <text class="actxtt">{{item.subjectTitle}}</text>
+                <view class="zan" data-id='{{item.id}}'data-index='{{index}}'  catchtap='clickForXcx'>
+                    <image wx:if='{{item.clickStatus==1}}' class="" src="https://cdn.lastmiles.cn/apps/6480324118091673600.png?size=1598"></image>
+                    <image wx:if='{{item.clickStatus==0}}'  class="" src="https://cdn.lastmiles.cn/apps/6480324179907325952.png?size=1480"></image>
+                    <text>{{item.clickNum}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="activity" wx:if='{{index==2}}'>
+        <view class='air' wx:if='{{data.length==0}}'>空</view>
+        <view class="box" wx:for="{{data}}"  data-id='{{item.id}}' bindtap='tospecial'>
+            <view class="head">
+                <image class="img" src="https://cdn.lastmiles.cn/apps/6486850525391237120.png?size=16988"></image>
+                <text class="actxtt">羿玛活动</text>
+                <view class="officialnumber">官方号</view>
+            </view>
+            <view class="middle">
+                <image class="img" src="{{item.subjectImg}}"></image>
+            </view>
+            <view class="bottem">
+                <text class="actxtt">{{item.subjectTitle}}</text>
+                <view class="zan" data-id='{{item.id}}' data-index='{{index}}' catchtap='clickForXcx'>
+                    <image wx:if='{{item.clickStatus==1}}' class="" src="https://cdn.lastmiles.cn/apps/6480324118091673600.png?size=1598"></image>
+                    <image wx:if='{{item.clickStatus==0}}'  class="" src="https://cdn.lastmiles.cn/apps/6480324179907325952.png?size=1480"></image>
+                    <text>{{item.clickNum}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

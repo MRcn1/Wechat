@@ -1,0 +1,130 @@
+/* vues/activity/activity.wxss */
+page{
+    background-color: #f6f6f6;
+}
+.top{
+    width: 100%;
+    height: 80rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+}
+.top .tabs{
+    display: inline-block;
+    height: 80rpx;
+    font-size: 26rpx;
+    color: #803b36;
+    line-height: 80rpx;
+}
+.top .active{
+    display: inline-block;
+    height: 80rpx;
+    font-size: 26rpx;
+    color: #803b36;
+    line-height: 80rpx;
+    position: relative;
+}
+.top .active::after{
+    width: 100%;
+    content: ' ';
+    height: 3px;
+    background-color: #803b36;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.activity .box{
+    width: 100%;
+    height: 450rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 0 auto;
+    margin-top: 10rpx;
+    padding: 0 30rpx;
+}
+.activity{
+    width: 100%;
+	overflow: hidden;
+	margin-top: 40rpx;
+}
+.activity .box .head{
+    width: 100%;
+    height: 60rpx;
+    padding: 10rpx 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.activity .box .head .img{
+    width: 51rpx;
+    height: 51rpx;
+	border-radius: 50%;
+	border: 1px solid #f5f5f5;
+}
+.activity .box .head .actxtt{
+    display: inline-block;
+    position: absolute;
+    font-size: 24rpx;
+    margin-left: 24rpx;
+    top: 23rpx;
+}
+.activity .box .head .officialnumber{
+    position: absolute;
+    width: 106rpx;
+    height: 42rpx;
+    display: inline-block;
+    margin-left: 130rpx;
+    top: 15rpx;
+    background: url('https://cdn.lastmiles.cn/apps/6479166965154852864.png?size=1414') no-repeat;
+    background-size: 100% 100%;
+    font-size: 20rpx;
+    color: #ffffff;
+    line-height: 42rpx;
+    text-align: center;
+}
+
+.middle .img{
+    width: 92%;
+    height:290rpx;
+    margin-top: 14rpx;
+}
+.activity .box .bottem{
+    position: relative;
+}
+.bottem .actxtt{
+    position: absolute;
+    font-size: 28rpx;
+    color: #333333;
+    margin-top: 25rpx;
+}
+.bottem .zan{
+    display: inline-block;
+    width: 100rpx;
+    height: 50rpx;
+    position: absolute;
+    right: 10rpx;
+    margin-top: 12rpx;
+}
+.bottem .zan image{
+    width: 35rpx;
+    height: 35rpx;
+    position: absolute;
+    margin-left: -40rpx;
+    top: 10rpx;
+}
+.bottem .zan text{
+    font-size: 24rpx;
+    color: #999999;
+    margin-left: 10rpx;
+    top: 10rpx;
+    position: absolute;
+}
+.air{
+	width: 100%;
+	margin-top: 20rpx;
+	display: flex;
+	justify-content: center;
+	color: #ccc;
+}

@@ -1,0 +1,33 @@
+<!--vues/maca/maca.wxml-->
+<view class="maca">
+    <view class="top">
+        <view class="mymaca">
+            <image class="img" src="../images/kadou_05.png"></image>
+            <span class="small">
+                当前咖豆
+                <span class="big">{{cadou}}</span>
+                个
+            </span>
+        </view>
+    </view>
+
+    <view class="three">
+        <text>最近七天咖豆收支明细</text>
+    </view>
+
+    <view class="list">
+        <view class="box" wx:for='{{data}}' wx:key=''>
+            <view class="order" hover-class="none" hover-stop-propagation="false">
+                <p class="">
+                    {{item.createdDate}}
+                </p>
+                <p class="">
+                    {{item.changeTypename}}
+                </p>
+            </view>
+            <view class="right" hover-class="none" hover-stop-propagation="false">
+                {{item.afterChangeScore-item.beforeChangeScore>0?'+'+(item.afterChangeScore-item.beforeChangeScore):item.afterChangeScore-item.beforeChangeScore}}
+            </view>
+        </view>
+    </view>
+</view>
