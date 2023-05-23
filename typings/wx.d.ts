@@ -1119,7 +1119,7 @@ declare var wx: {
     /**
      * 从本地缓存中同步获取指定 key 对应的内容。
      */
-    getStorageSync(key: string): void;
+	getStorageSync(key: string): string | undefined;
                     
     /**
      * 异步获取当前storage的相关信息
@@ -2097,11 +2097,11 @@ declare var wx: {
         /**
          * 提示的标题
          */
-        title: string;
+        title?: string;
         /**
          * 提示的内容
          */
-        content: string;
+        content?: string;
         /**
          * 是否显示取消按钮，默认为 true
          */
@@ -2113,7 +2113,7 @@ declare var wx: {
         /**
          * 取消按钮的文字颜色，默认为"#000000"
          */
-        cancelColor?: undefined;
+        cancelColor?: string;
         /**
          * 确定按钮的文字，默认为"确定"，最多 4 个字符
          */
@@ -2121,7 +2121,7 @@ declare var wx: {
         /**
          * 确定按钮的文字颜色，默认为"#3CC51F"
          */
-        confirmColor?: undefined;
+        confirmColor?: string;
         /**
          * 接口调用成功的回调函数
          */
